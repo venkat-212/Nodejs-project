@@ -1,0 +1,15 @@
+[2024-02-18T18:19:07.829Z] Device registered - deviceId: asdf, deviceType: asdf
+[2024-02-18T18:19:16.410Z] Device registered - deviceId: asdfgh, deviceType: asdf
+[2024-02-18T18:19:41.396Z] Data received - deviceId: asdf, data: asdf
+[2024-02-18T18:19:41.875Z] Data received - deviceId: asdf, data: asdf
+[2024-02-18T18:19:42.069Z] Data received - deviceId: asdf, data: asdf
+[2024-02-18T18:19:44.874Z] Command sent - deviceId: asdf, command: sdf
+[2024-02-18T18:30:36.856Z] Data received - deviceId: asdf, data: safd
+[2024-02-18T18:30:40.091Z] Command sent - deviceId: asf, command: asdf
+[2024-02-18T18:39:51.655Z] Device registered - deviceId: awer, deviceType: asdf
+[2024-02-18T18:39:57.019Z] Data received - deviceId: asdf, data: asdf
+[2024-02-18T18:40:03.227Z] Command sent - deviceId: asdf, command: sdf
+[2024-02-18T18:43:26.832Z] Device registered - deviceId: asd, deviceType: ad
+[2024-02-18T18:43:32.936Z] Data received - deviceId: ad, data: ad
+[2024-02-18T18:43:34.923Z] Data received - deviceId: ad, data: ad
+[2024-02-18T18:50:11.871Z] Command sent - deviceId: asd, command: asd
