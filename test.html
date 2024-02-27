@@ -1,68 +1,57 @@
+<!-- public/index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IoT Device Management System</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="container">
-    <header>
-      <h1>IoT Device Management System</h1>
-    </header>
+  <h1>IoT Device Management System</h1>
 
-    <main>
-      <section class="device-management">
-        <h2>Device Registration</h2>
-        <form id="registerForm" class="device-form">
-          <div class="form-group">
-            <label for="deviceId">Device ID:</label>
-            <input type="text" id="deviceId" name="deviceId" required>
-          </div>
-          <div class="form-group">
-            <label for="deviceType">Device Type:</label>
-            <input type="text" id="deviceType" name="deviceType" required>
-          </div>
-          <button type="button" onclick="registerDevice()">Register Device</button>
-        </form>
-      </section>
+  <!-- Device Registration Form -->
+  <h2>Register New Device</h2>
+  <form id="registerForm">
+    <label for="deviceId">Device ID:</label>
+    <input type="text" id="deviceId" name="deviceId" required>
+    <label for="deviceType">Device Type:</label>
+    <input type="text" id="deviceType" name="deviceType" required>
+    <button type="button" onclick="registerDevice()">Register Device</button>
+  </form>
 
-      <section class="data-interaction">
-        <h2>Send Data</h2>
-        <form id="sendDataForm" class="device-form">
-          <div class="form-group">
-            <label for="dataDeviceId">Device ID:</label>
-            <input type="text" id="dataDeviceId" name="dataDeviceId" required>
-          </div>
-          <div class="form-group">
-            <label for="data">Data:</label>
-            <input type="text" id="data" name="data" required>
-          </div>
-          <button type="button" onclick="sendData()">Send Data</button>
-        </form>
+  <!-- Display Registered Devices -->
+  <!-- <h2>Registered Devices</h2>
+  <ul id="deviceList"></ul> -->
 
-        <h2>Send Command</h2>
-        <form id="sendCommandForm" class="device-form">
-          <div class="form-group">
-            <label for="commandDeviceId">Device ID:</label>
-            <input type="text" id="commandDeviceId" name="commandDeviceId" required>
-          </div>
-          <div class="form-group">
-            <label for="command">Command:</label>
-            <input type="text" id="command" name="command" required>
-          </div>
-          <button type="button" onclick="sendCommand()">Send Command</button>
-        </form>
-      </section>
+  <!-- Send Data Form -->
+  <h2>Send Data</h2>
+  <form id="sendDataForm">
+    <label for="dataDeviceId">Device ID:</label>
+    <input type="text" id="dataDeviceId" name="dataDeviceId" required>
+    <label for="data">Data:</label>
+    <input type="text" id="data" name="data" required>
+    <button type="button" onclick="sendData()">Send Data</button>
+  </form>
 
-      <h2>Response:</h2>
-      <div id="responseSection"></div>
+  <!-- Send Command Form -->
+  <h2>Send Command</h2>
+  <form id="sendCommandForm">
+    <label for="commandDeviceId">Device ID:</label>
+    <input type="text" id="commandDeviceId" name="commandDeviceId" required>
+    <label for="command">Command:</label>
+    <input type="text" id="command" name="command" required>
+    <button type="button" onclick="sendCommand()">Send Command</button>
+  </form>
 
-      <button class="show-devices-btn" onclick="showDevices()">Show Registered Devices</button>
-      <ul id="deviceList" class="device-list" style="display: none;"></ul>
-    </main>
-  </section>
+  <div id="responseSection">
+    <h2>Response:</h2>
+    <div id="responseMessage"></div>
+  </div>
+
+  <h2>Registered Devices</h2>
+  <button onclick="showDevices()">Show Registered Devices</button>
+  <ul id="deviceList"></ul>
 
   <script>
     // Function to register a new device
@@ -155,7 +144,7 @@
 
     function displayResponseMessage(message) {
       const responseSectionDiv = document.getElementById('responseSection');
-      responseSectionDiv.innerHTML = `<div id="responseMessage">${message}</div>`;
+      responseSectionDiv.innerHTML = `<h2>Response:</h2><div id="responseMessage">${message}</div>`;
     }
 
     async function showDevices() {
@@ -172,9 +161,6 @@
         listItem.textContent = `Device ID: ${device.deviceId}, Device Type: ${device.deviceType}`;
         deviceList.appendChild(listItem);
       });
-
-      // Show the device list
-      deviceList.style.display = 'block';
     } catch (error) {
       console.error(error);
       alert('Error fetching devices. Please try again.');

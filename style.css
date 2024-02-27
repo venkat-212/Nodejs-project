@@ -1,0 +1,140 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  section {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+  }
+  
+  .device-management,
+  .data-interaction {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .device-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  label {
+    font-weight: bold;
+    width: 120px;
+  }
+  
+  input[type="text"],
+  input[type="button"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+
+  h2 {
+    margin-bottom: 5px; /* Adjust value as needed */
+  }
+  
+  #responseSection {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .device-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .device-list li {
+    padding: 5px 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .show-devices-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  /* Media queries for responsive design */
+  
+  @media only screen and (max-width: 768px) {
+    .container {
+      max-width: 90%;
+    }
+  
+    .device-form {
+      flex-direction: column;
+      padding-top: 0;
+    }
+  
+    .form-group {
+      flex-direction: column;
+    }
+  
+    label {
+      width: auto;
+      text-align: left;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .show-devices-btn {
+      width: 100%;
+    }
+  }
+  
