@@ -142,7 +142,7 @@
         body: JSON.stringify({ deviceId: commandDeviceId, command }),
       })
       .then(response => {
-        if (response.ok) {
+        if (response.ok) {  
           // alert('Command sent successfully');
           displayResponseMessage('Command sent successfully');
         } else {
